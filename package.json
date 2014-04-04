@@ -1,5 +1,5 @@
 {
-  "name": "node-quandl",
+  "name": "quandl",
   "version": "0.0.1",
   "description": "A nodejs module for interacting with the Quandl API.",
   "main": "main.js",
