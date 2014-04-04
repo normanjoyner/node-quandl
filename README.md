@@ -15,7 +15,7 @@ Norman Joyner - norman.joyner@gmail.com
 ```npm install quandl```
 
 ###Configuration
-Simply require the quandl module, instantiate a new Quandle object, configure it if necessary, and start making calls. The auth token and api version are configurable.
+Simply require the quandl module, instantiate a new Quandl object, configure it if necessary, and start making calls. The auth token and api version are configurable.
 
 New Quandl objects can be instantiated with configuration parameters. Here is an example:
 ```javascript
