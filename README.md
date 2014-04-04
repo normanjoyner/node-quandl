@@ -71,9 +71,9 @@ quandl.metadata("ZILLOW", "ZIP_ALLHOMES_15235", function(err, response){
 });
 ```
 
-Search for datasets pertaining to "crude oil", and print response:
+Search for datasets pertaining to "crude oil", and print xml response:
 ```javascript
-quandl.search("crude oil", { format: "json" }, function(err, response){
+quandl.search("crude oil", { format: "xml" }, function(err, response){
     console.log(err);
     console.log(response);
 });
