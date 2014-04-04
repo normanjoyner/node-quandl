@@ -1,0 +1,35 @@
+{
+  "name": "node-quandl",
+  "version": "0.0.0",
+  "description": "A nodejs module for interacting with the Quandl API.",
+  "main": "main.js",
+  "dependencies": {
+    "async": "~0.6.2",
+    "lodash": "~2.4.1",
+    "request": "~2.34.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/normanjoyner/node-quandl.git"
+  },
+  "keywords": [
+    "quandl",
+    "api",
+    "finance",
+    "numerical",
+    "data",
+    "economic",
+    "social",
+    "datasets"
+  ],
+  "author": "Norman Joyner <norman.joyner@gmail.com>",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/normanjoyner/node-quandl/issues"
+  },
+  "homepage": "https://github.com/normanjoyner/node-quandl"
+}
