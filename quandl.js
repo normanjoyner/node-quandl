@@ -12,7 +12,7 @@ function Quandl(config){
 
 Quandl.prototype.configure = function(config){
     this.config = _.defaults(config, {
-        api_key: undefined,
+        auth_token: undefined,
         api_version: 1
     });
 
