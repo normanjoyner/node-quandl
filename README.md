@@ -81,7 +81,9 @@ quandl.search("crude oil", { format: "xml" }, function(err, response){
 
 ###Running Tests
 Install the mocha module:
+
 ```npm install mocha -g```
 
 From root project directory, run mocha:
-```mocha```
+
+```mocha ```
