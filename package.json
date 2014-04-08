@@ -4,9 +4,10 @@
   "description": "A nodejs module for interacting with the Quandl API.",
   "main": "main.js",
   "dependencies": {
-    "async": "~0.6.2",
-    "lodash": "~2.4.1",
-    "request": "~2.34.0"
+    "assert": "^1.1.1",
+    "async": "^0.6.2",
+    "lodash": "^2.4.1",
+    "request": "https://registry.npmjs.org/request/-/request-2.34.0.tgz"
   },
   "devDependencies": {},
   "scripts": {
