@@ -2,21 +2,17 @@ var _ = require("lodash");
 var api = require([__dirname, "lib", "api"].join("/"));
 
 function Quandl(config){
-    var self = this;
-    _.each(api, function(method, name){
-        self[name] = method;
-    });
-
     this.configure(config || {});
 }
 
 Quandl.prototype.configure = function(config){
-    this.config = _.defaults(config, {
-        auth_token: undefined,
-        api_version: 1
-    });
-
-    this.config.api_version = ["v", this.config.api_version].join("");
+    this.auth_token = config.auth_token || undefined;
+    this.api_version = config.api_version || 1;
+    this.api_version = ["v", this.api_version].join("");
 }
+
+_.each(api, function(method, name){
+    Quandl.prototype[name] = method;
+});
 
 module.exports = Quandl;
