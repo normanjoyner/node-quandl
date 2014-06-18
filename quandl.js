@@ -7,6 +7,7 @@ function Quandl(config){
 
 Quandl.prototype.configure = function(config){
     this.auth_token = config.auth_token || undefined;
+    this.proxy = config.proxy || undefined;
     this.api_version = config.api_version || 1;
     this.api_version = ["v", this.api_version].join("");
 }
