@@ -22,11 +22,12 @@ New Quandl objects can be instantiated with configuration parameters. Here is an
 var Quandl = require("quandl");
 var quandl = new Quandl({
     auth_token: "dsahFHUiewjjd",
-    api_version: 1
+    api_version: 1,
+    proxy: "http://myproxy:3128"
 });
 ```
 
-Quandl objects can also be configured via the ```.configure(options)``` method. Here is an exmaple: 
+Quandl objects can also be configured via the ```.configure(options)``` method. Here is an exmaple:
 ```javascript
 var Quandl = require("quandl");
 var quandl = new Quandl();
@@ -40,6 +41,7 @@ quandl.configure(options);
 
 The auth_token parameter defaults to undefined (anonymous access). Be aware of the [Quandl Usage Rules](http://www.quandl.com/help/api#Usage-Rules).
 The api_version parameter defaults to 1, for v1 api access.
+The proxy parameter routes all requests through the specfied proxy.
 
 ###Supported API versions
 * v1
