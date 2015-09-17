@@ -22,7 +22,7 @@ New Quandl objects can be instantiated with configuration parameters. Here is an
 var Quandl = require("quandl");
 var quandl = new Quandl({
     auth_token: "dsahFHUiewjjd",
-    api_version: 1,
+    api_version: 3,
     proxy: "http://myproxy:3128"
 });
 ```
@@ -45,6 +45,7 @@ The proxy parameter routes all requests through the specfied proxy.
 
 ###Supported API versions
 * v1
+* v3
 
 ###Supported API Methods
 * [Getting a Dataset](http://www.quandl.com/help/api#A-Simple-Example)
