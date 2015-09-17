@@ -40,7 +40,7 @@ quandl.configure(options);
 ```
 
 The auth_token parameter defaults to undefined (anonymous access). Be aware of the [Quandl Usage Rules](http://www.quandl.com/help/api#Usage-Rules).
-The api_version parameter defaults to 1, for v1 api access.
+The api_version parameter defaults to 3, for v3 api access.
 The proxy parameter routes all requests through the specfied proxy.
 
 ###Supported API versions
