@@ -48,7 +48,7 @@ describe("quandl", function(){
             assert.equal(quandl.last_uri_called, "");
         });
 
-        it("has correct api call for v3", function() {
+        it("has correct api call for dataset v3", function() {
             quandl.configure({
                 api_version: 3,
                 auth_token: "dsahFHUiewjjd"
@@ -60,7 +60,7 @@ describe("quandl", function(){
 
             assert.equal(
                 quandl.last_uri_called, 
-                "api/v1/datasets/CBOE/VXEEM.json");
+                "api/v3/datasets/CBOE/VXEEM");
         });
     });
 
