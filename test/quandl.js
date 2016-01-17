@@ -41,4 +41,27 @@ describe("quandl", function(){
         });
 
     });
+
+
+    describe("contains last_uri_call", function(){
+        it("contains an empty string value", function() {
+            assert.equal(quandl.last_uri_called, "");
+        });
+
+        it("has correct api call for v3", function() {
+            quandl.configure({
+                api_version: 3,
+                auth_token: "dsahFHUiewjjd"
+            });
+
+            quandl.dataset(
+                {source: 'CBOE/VXEEM', format: 'json'},
+                function(){});
+
+            assert.equal(
+                quandl.last_uri_called, 
+                "api/v1/datasets/CBOE/VXEEM.json");
+        });
+    });
+
 });
