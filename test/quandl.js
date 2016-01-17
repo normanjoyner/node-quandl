@@ -24,7 +24,7 @@ describe("quandl", function(){
         });
 
         it("default config parameters are set correctly", function(){
-            assert.equal(quandl.api_version, "v1");
+            assert.equal(quandl.api_version, "v3");
             assert.equal(quandl.auth_token, undefined);
         });
 
