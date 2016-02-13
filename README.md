@@ -83,7 +83,7 @@ quandl.search("crude oil", { format: "xml" }, function(err, response){
 ```
 
 ###Passing Search Parameters
-It's possible to make simple transformations of the data prior to retrieving it. For example, you can trim the data by excluding certain fields, slice the data using start and end dates, and even sort the by in ascending or descending order.
+It's possible to make simple transformations of the data prior to retrieving it. For example, you can trim the data by excluding certain fields, slice the data using start and end dates, and even sort the data in ascending or descending order.
 
 In the following example, only the closing prices for Facebook between January 30, 2015 and January 29, 2016 are retrieved. In this case, the closing prices are presented in ascending order.
 
