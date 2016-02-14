@@ -82,5 +82,38 @@ quandl.search("crude oil", { format: "xml" }, function(err, response){
 });
 ```
 
+###Passing Search Parameters
+It's possible to make simple transformations of the data prior to retrieving it. For example, you can trim the data by excluding certain fields, slice the data using start and end dates, and even sort the data in ascending or descending order.
+
+In the following example, only the closing prices for Facebook between January 30, 2015 and January 29, 2016 are retrieved. In this case, the closing prices are presented in ascending order.
+
+```javascript
+var quandl = new Quandl({
+  auth_token: "MY API TOKEN",
+  api_version: 3
+});
+
+quandl.dataset({
+  source: "WIKI",
+  table: "FB"
+}, {
+  order: "asc",
+  exclude_column_names: true,
+  // Notice the YYYY-MM-DD format
+  start_date: "2015-01-30",
+  end_date: "2016-01-29",
+  column_index: 4
+}, function(err, response){
+    if(err)
+        throw err;
+
+    console.log(response);
+});
+```
+
+You can customize the dataset object by adding extra parameters. For more information about these optional parameters, please take a look at [Quandl's API Docs](https://www.quandl.com/docs/api?json#data).
+
+If you don't want to hard code the start and/or end dates, use [Moment](http://momentjs.com/) to capture and manipulate the current date and time.
+
 ###Running Tests
 ```npm test```
