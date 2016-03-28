@@ -4,7 +4,7 @@ node-quandl
 ##About
 
 ###Description
-A nodejs module for interacting with the Quandl API.
+A nodejs module for interacting with the [Quandl](https://www.quandl.com) API.
 
 ###Author
 Norman Joyner - norman.joyner@gmail.com
@@ -39,7 +39,7 @@ var options = {
 quandl.configure(options);
 ```
 
-The auth_token parameter defaults to undefined (anonymous access). Be aware of the [Quandl Usage Rules](http://www.quandl.com/help/api#Usage-Rules).
+The auth_token parameter defaults to undefined (anonymous access). Be aware of the [Quandl Usage Rules](https://www.quandl.com/help/api#Usage-Rules).
 The api_version parameter defaults to 3, for v3 api access.
 The proxy parameter routes all requests through the specfied proxy.
 
@@ -48,11 +48,11 @@ The proxy parameter routes all requests through the specfied proxy.
 * v3
 
 ###Supported API Methods
-* [Getting a Dataset](http://www.quandl.com/help/api#A-Simple-Example)
-* [Getting Metadata](http://www.quandl.com/help/api#Getting-Metadata)
-* [Getting Multiple Datasets](http://www.quandl.com/help/api#Multiple-Datasets)
-* [Performing a Search](http://www.quandl.com/help/api#Doing-a-Search)
-* [Getting Favorites](http://www.quandl.com/help/api#Getting-Favourites)
+* [Getting a Dataset](https://www.quandl.com/help/api#A-Simple-Example)
+* [Getting Metadata](https://www.quandl.com/help/api#Getting-Metadata)
+* [Getting Multiple Datasets](https://www.quandl.com/help/api#Multiple-Datasets)
+* [Performing a Search](https://www.quandl.com/help/api#Doing-a-Search)
+* [Getting Favorites](https://www.quandl.com/help/api#Getting-Favourites)
 
 ###Examples
 Fetch Mt. Gox Bitcoin dataset, and print response:
