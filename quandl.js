@@ -3,6 +3,7 @@ var api = require([__dirname, "lib", "api"].join("/"));
 
 function Quandl(config){
     this.configure(config || {});
+    this.last_uri_called = ""; // contains the string value of the last uri called for debugging and testing, empty if no calls made
 }
 
 Quandl.prototype.configure = function(config){
