@@ -57,28 +57,42 @@ The proxy parameter routes all requests through the specfied proxy.
 ###Examples
 Fetch Mt. Gox Bitcoin dataset, and print response:
 ```javascript
-quandl.dataset({ source: "BITCOIN", table: "MTGOXUSD" }, function(err, response){
+quandl.dataset({ source: "BITCOIN", table: "MTGOXUSD" }, function(err, data){
     if(err)
         throw err;
 
-    console.log(response);
+    console.log(data);
 });
 ```
 Fetch dataset metadata, and print response:
 ```javascript
-quandl.metadata("ZILLOW", "ZIP_ALLHOMES_15235", function(err, response){
+quandl.metadata("ZILLOW", "ZIP_ALLHOMES_15235", function(err, data){
     if(err)
         throw err;
 
-    console.log(response);
+    console.log(data);
 });
 ```
 
 Search for datasets pertaining to "crude oil", and print xml response:
 ```javascript
-quandl.search("crude oil", { format: "xml" }, function(err, response){
+quandl.search("crude oil", { format: "xml" }, function(err, data){
     console.log(err);
-    console.log(response);
+    console.log(data);
+});
+```
+
+Response status, headers, etc. can be obtained by passing a third argument to the callback (see [http.IncomingMessage](https://nodejs.org/api/http.html)):
+```javascript
+quandl.dataset({ source: "BITCOIN", table: "MTGOXUSD" }, function(err, data, response){
+    if(err)
+        throw err;
+    
+    if (response.statusCode === 200){
+        console.log(data);
+    } else {
+        console.error(response.statusCode, response.statusMessage, data);
+    }
 });
 ```
 
@@ -103,11 +117,11 @@ quandl.dataset({
   start_date: "2015-01-30",
   end_date: "2016-01-29",
   column_index: 4
-}, function(err, response){
+}, function(err, data){
     if(err)
         throw err;
 
-    console.log(response);
+    console.log(data);
 });
 ```
 
