@@ -82,7 +82,7 @@ quandl.search("crude oil", { format: "xml" }, function(err, data){
 });
 ```
 
-Response status, headers, etc. can be obtained by passing a third argument to the callback (see [http.IncomingMessage](https://nodejs.org/api/http.html)):
+Response status, headers, etc. can be obtained by specifying a third parameter in the callback (see [http.IncomingMessage](https://nodejs.org/api/http.html)):
 ```javascript
 quandl.dataset({ source: "BITCOIN", table: "MTGOXUSD" }, function(err, data, response){
     if(err)
