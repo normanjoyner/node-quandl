@@ -1,20 +1,20 @@
 node-quandl
 ====================
 
-##About
+## About
 
-###Description
+### Description
 A nodejs module for interacting with the [Quandl](https://www.quandl.com) API.
 
-###Author
+### Author
 Norman Joyner - norman.joyner@gmail.com
 
-##Getting Started
+## Getting Started
 
-###Installation
+### Installation
 ```npm install quandl```
 
-###Configuration
+### Configuration
 Simply require the quandl module, instantiate a new Quandl object, configure it if necessary, and start making calls. The auth token and api version are configurable.
 
 New Quandl objects can be instantiated with configuration parameters. Here is an example:
@@ -43,18 +43,18 @@ The auth_token parameter defaults to undefined (anonymous access). Be aware of t
 The api_version parameter defaults to 3, for v3 api access.
 The proxy parameter routes all requests through the specfied proxy.
 
-###Supported API versions
+### Supported API versions
 * v1
 * v3
 
-###Supported API Methods
+### Supported API Methods
 * [Getting a Dataset](https://www.quandl.com/help/api#A-Simple-Example)
 * [Getting Metadata](https://www.quandl.com/help/api#Getting-Metadata)
 * [Getting Multiple Datasets](https://www.quandl.com/help/api#Multiple-Datasets)
 * [Performing a Search](https://www.quandl.com/help/api#Doing-a-Search)
 * [Getting Favorites](https://www.quandl.com/help/api#Getting-Favourites)
 
-###Examples
+### Examples
 Fetch Mt. Gox Bitcoin dataset, and print response:
 ```javascript
 quandl.dataset({ source: "BITCOIN", table: "MTGOXUSD" }, function(err, response){
@@ -82,7 +82,7 @@ quandl.search("crude oil", { format: "xml" }, function(err, response){
 });
 ```
 
-###Passing Search Parameters
+### Passing Search Parameters
 It's possible to make simple transformations of the data prior to retrieving it. For example, you can trim the data by excluding certain fields, slice the data using start and end dates, and even sort the data in ascending or descending order.
 
 In the following example, only the closing prices for Facebook between January 30, 2015 and January 29, 2016 are retrieved. In this case, the closing prices are presented in ascending order.
@@ -115,5 +115,5 @@ You can customize the dataset object by adding extra parameters. For more inform
 
 If you don't want to hard code the start and/or end dates, use [Moment](http://momentjs.com/) to capture and manipulate the current date and time.
 
-###Running Tests
+### Running Tests
 ```npm test```
