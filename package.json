@@ -6,7 +6,7 @@
   "dependencies": {
     "assert": "^1.1.1",
     "async": "^0.6.2",
-    "lodash": "^2.4.1",
+    "lodash": "^4.17.21",
     "mocha": "^2.2.4",
     "request": "https://registry.npmjs.org/request/-/request-2.34.0.tgz"
   },
